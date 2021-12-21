@@ -4,15 +4,24 @@
 	&__row {
 		display: flex;
 		align-items: center;
+		@include breakpoint(lg) {
+			justify-content: space-between;
+		}
 	}
 	&-nav {
 		color: #292929;
 		margin-left: 172px;
+		@include breakpoint(lg) {
+			margin-left: 30px;
+		}
 		&__list {
 			display: flex;
 		}
 		li + li {
 			margin-left: 70px;
+			@include breakpoint(lg) {
+				margin-left: 50px;
+			}
 		}
 		&__link {
 			transition: color 0.2s ease;
@@ -21,19 +30,28 @@
 			color: $green;
 		}
 	}
-	&__login {
+	&-login {
 		display: flex;
 		align-items: center;
 		margin-left: auto;
+		@include breakpoint(lg) {
+			margin-left: unset;
+		}
 		> * + * {
 			margin-left: 35px;
 		}
 	}
-	&__login a {
+	&-nav,
+	&-login {
+		@include breakpoint(md) {
+			display: none;
+		}
+	}
+	&-login__link {
 		color: #000;
 		transition: color 0.2s ease;
 	}
-	&__login a:hover {
+	&-login__link a:hover {
 		color: $green;
 	}
 }

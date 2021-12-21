@@ -1,0 +1,23 @@
+.footer {
+	&-nav {
+		font-size: 25px;
+		font-weight: 600;
+	}
+	background-color: $darkgreen;
+	color: $white;
+	padding: 104px 0 144px;
+	&__logo + * {
+		margin-top: 74px;
+	}
+	&__items {
+		.footer__item + .footer__item {
+			margin-top: 60px;
+		}
+	}
+	&__item a {
+		transition: opacity 0.5s ease;
+	}
+	&__item a:hover {
+		opacity: 0.7;
+	}
+}

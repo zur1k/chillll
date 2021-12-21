@@ -1,6 +1,6 @@
 .story {
 	padding: 229px 0 176px;
-	background-color: #245852;
+	background-color: $darkgreen;
 	color: $white;
 	&__row {
 		display: flex;
@@ -35,10 +35,9 @@
 .story__video {
 	width: 895px;
 	position: relative;
+	border-radius: 18px;
+	overflow: hidden;
 
-	&-object {
-		border-radius: 18px;
-	}
 	&-overlay {
 		border-radius: 18px;
 

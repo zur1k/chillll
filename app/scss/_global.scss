@@ -6,10 +6,14 @@ body {
 	font-size: 20px;
 	line-height: 1.5;
 	color: $fontMain;
+	@include breakpoint(md) {
+		font-size: 16px;
+	}
 }
 
 .container {
 	max-width: 1400px;
+	width: 100%;
 	margin: 0 auto;
 	padding: 0 15px;
 }
@@ -26,4 +30,8 @@ body {
 	margin-left: -10000px;
 	background: transparent;
 	font-size: 0;
+}
+
+.none {
+	display: none;
 }

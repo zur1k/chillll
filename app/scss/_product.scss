@@ -45,4 +45,14 @@
 	&__image {
 		border-radius: 18px;
 	}
+	&__wrapper {
+		padding-left: 60px;
+		padding-bottom: 74px;
+		position: relative;
+	}
+}
+.product-card {
+	position: absolute;
+	left: 0;
+	bottom: 0;
 }
