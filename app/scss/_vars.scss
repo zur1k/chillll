@@ -6,23 +6,31 @@ $darkgreen: #245852;
 //media
 
 @mixin breakpoint($point) {
-	@if $point == lg {
+	@if $point == 1400 {
+		@media (max-width: 1400px) {
+			@content;
+		}
+	} @else if $point == 1299 {
+		@media (max-width: 1299px) {
+			@content;
+		}
+	} @else if $point == 1200 {
 		@media (max-width: 1200px) {
 			@content;
 		}
-	} @else if $point == md {
+	} @else if $point == 992 {
 		@media (max-width: 992px) {
 			@content;
 		}
-	} @else if $point == sm {
+	} @else if $point == 576 {
 		@media (max-width: 576px) {
 			@content;
 		}
-	} @else if $point == xs {
-		@media (max-width: 500px) {
+	} @else if $point == 401 {
+		@media (max-width: 401px) {
 			@content;
 		}
-	} @else if $point == minlg {
+	} @else if $point == min {
 		@media (min-width: 1201px) {
 			@content;
 		}

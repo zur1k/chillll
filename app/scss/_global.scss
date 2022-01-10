@@ -6,7 +6,7 @@ body {
 	font-size: 20px;
 	line-height: 1.5;
 	color: $fontMain;
-	@include breakpoint(md) {
+	@include breakpoint(992) {
 		font-size: 16px;
 	}
 }
@@ -19,6 +19,11 @@ body {
 }
 .container-wide {
 	max-width: 1536px;
+}
+@media (max-width: 1535px) {
+	.container {
+		width: 100%;
+	}
 }
 .visually-hidden {
 	position: absolute;
@@ -34,4 +39,7 @@ body {
 
 .none {
 	display: none;
+}
+.no-scroll {
+	overflow: hidden;
 }

@@ -1,17 +1,26 @@
 .header {
 	padding: 17px 0;
 	border-bottom: 1px solid #d6d6d6;
+	@include breakpoint(992) {
+		z-index: 1000;
+		background: #fff;
+		position: fixed;
+		left: 0;
+		right: 0;
+		box-shadow: 1px 2px 2px 2px hsla(124, 69%, 13%, 0.181);
+	}
+
 	&__row {
 		display: flex;
 		align-items: center;
-		@include breakpoint(lg) {
+		@include breakpoint(1200) {
 			justify-content: space-between;
 		}
 	}
 	&-nav {
 		color: #292929;
 		margin-left: 172px;
-		@include breakpoint(lg) {
+		@include breakpoint(1200) {
 			margin-left: 30px;
 		}
 		&__list {
@@ -19,7 +28,7 @@
 		}
 		li + li {
 			margin-left: 70px;
-			@include breakpoint(lg) {
+			@include breakpoint(1200) {
 				margin-left: 50px;
 			}
 		}
@@ -34,7 +43,7 @@
 		display: flex;
 		align-items: center;
 		margin-left: auto;
-		@include breakpoint(lg) {
+		@include breakpoint(1200) {
 			margin-left: unset;
 		}
 		> * + * {
@@ -43,7 +52,7 @@
 	}
 	&-nav,
 	&-login {
-		@include breakpoint(md) {
+		@include breakpoint(992) {
 			display: none;
 		}
 	}

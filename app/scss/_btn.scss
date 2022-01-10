@@ -24,7 +24,7 @@ a.btn:hover {
 	opacity: 0.8;
 	color: $white;
 
-	@include breakpoint(md) {
+	@include breakpoint(992) {
 		min-height: 41px;
 		padding-left: 30px;
 		padding-right: 30px;
@@ -35,7 +35,7 @@ a.btn:hover {
 a.btn--big {
 	min-height: 65px;
 
-	@include breakpoint(md) {
+	@include breakpoint(992) {
 		min-height: 55px;
 	}
 }

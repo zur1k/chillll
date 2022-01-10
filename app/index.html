@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>My project</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="fonts/Lato/stylesheet.css">
   <link rel="stylesheet" href="fonts/Georgia/stylesheet.css">
@@ -15,24 +15,48 @@
   <header class="header">
     <div class="container">
       <div class="header__row">
-        <div class="header__logo"><img src="images/logo.svg" alt="logo"></div>
-        <div class="header-nav">
-          <ul class="header-nav__list">
-            <li class="header-nav__element"><a class="header-nav__link" href="#">Why Alivio</a></li>
-            <li class="header-nav__element"><a class="header-nav__link" href="#">Solutions</a></li>
-            <li class="header-nav__element"><a class="header-nav__link" href="#">Community</a></li>
-            <li class="header-nav__element"><a class="header-nav__link" href="#">Pricing</a></li>
-          </ul>
+        <div class="header__logo">
+          <img src="images/logo.svg" alt="logo">
         </div>
+        <nav class="header-nav nav"">
+          <ul class=" header-nav__list">
+          <li class="header-nav__element"><a class="header-nav__link" href="#home">Why Alivio</a></li>
+          <li class="header-nav__element"><a class="header-nav__link" href="#solution">Solutions</a></li>
+          <li class="header-nav__element"><a class="header-nav__link" href="#community">Community</a></li>
+          <li class="header-nav__element"><a class="header-nav__link" href="#pricing">Pricing</a></li>
+          </ul>
+        </nav>
         <div class="header-login">
           <a class="header-login__link" href="#">Sing in</a>
-          <a class="btn" href="#">StartTrial</a>
+          <a class="btn" href="#">Start Trial</a>
         </div>
+        <button class="mobile-nav-button" type="button">
+          <span class="mobile-nav-button__icon"></span>
+        </button>
       </div>
     </div>
   </header>
+
+  <div class="mobile-nav">
+    <img class="mobile-nav__logo" src="images/logo.svg" alt="">
+
+    <nav id="mobile-nav" class="nav">
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__element"><a class="mobile-nav__link" href="#home">Why Alivio</a></li>
+        <li class="mobile-nav__element"><a class="mobile-nav__link" href="#solution">Solutions</a></li>
+        <li class="mobile-nav__element"><a class="mobile-nav__link" href="#community">Community</a></li>
+        <li class="mobile-nav__element"><a class="mobile-nav__link" href="#pricing">Pricing</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-login">
+      <a class="mobile-login__link" href="#">Sing in</a>
+      <a class="btn btn--big" href="#">Start Trial</a>
+    </div>
+
+  </div>
+
   <main>
-    <section class="home">
+    <section class="home" id="home">
       <div class="container">
         <div class="home__content">
           <h1 class="home__title">Be aware, Manage well.</h1>
@@ -49,7 +73,7 @@
         <img src="images/home/bg.jpg" alt="background cover">
       </div>
     </section>
-    <section class="howitworks none">
+    <section class="howitworks" id="solution">
       <div class="container">
         <div class="howitworks__header">
           <div class="howitworks__head">
@@ -67,7 +91,7 @@
             </p>
           </div>
         </div>
-        <div class="howitworks__steps">
+        <div class="howitworks__steps none ">
           <div class="howitworks__step-item">
             <h4 class="howitworks__step-heading" data-number="01">Personalize</h4>
             <div class="howitworks__step-text">
@@ -109,36 +133,36 @@
 
       </div>
     </section>
-    <section>
-      <div class="story none">
-        <div class="container container-wide">
-          <div class="story__row">
-            <div class="story__content">
-              <h2 class="story__title">Let's hear about Kayla's success story</h2>
-              <div class="story__text">
-                <p>
-                  See how well Alivio works in a real customer’s life.
-                </p>
-              </div>
-              <div class="story__btn">
-                <a href="#" class="btn btn">Let’s get started</a>
-              </div>
+    <section class="story" id="community">
+      <div class="container container-wide">
+        <div class="story__row">
+          <div class="story__content">
+            <h2 class="story__title">Let's hear about Kayla's success story</h2>
+            <div class="story__text">
+              <p>
+                See how well Alivio works in a real customer’s life.
+              </p>
             </div>
-            <div class="story__video">
-              <div class="story__video-overlay">
-                <button class="story__video-btn">
-                  <img src="images/story/play-video.svg" alt="">
-                </button>
-              </div>
-              <img class="story__video-object" src="images/story/video-cover.jpg" alt="">
+            <div class="story__btn">
+              <a href="#" class="btn btn">Let’s get started</a>
             </div>
           </div>
+          <div class="story__video">
+            <div class="story__video-overlay" id="video-story-overlay">
+              <button id="video-story-btn" class="story__video-btn">
+                <img id="video-story-btn-icon" width="82" height="82" src="images/story/play-video.svg" alt="">
+              </button>
+            </div>
+            <video class="story__video-object" id="video-story">
+              <source src="video/customer-story.mp4" type="video/mp4">
+            </video>
+          </div>
+          <!-- story video -->
         </div>
-
       </div>
     </section>
-    <section>
-      <div class="product none">
+    <section id="pricing">
+      <div class="product ">
         <div class="container">
           <div class="product__row">
             <div class="product-img">
@@ -186,16 +210,16 @@
       </div>
     </section>
   </main>
-  <footer class="footer none">
+  <footer class="footer">
     <div class="container">
       <div class="footer-content">
         <img src="images/footer-logo.svg" alt="footer-logo" class="footer__logo">
-        <nav class="footer-nav">
+        <nav class="footer-nav nav">
           <ul class="footer__items">
-            <li class="footer__item"><a href="#">Why Alivio</a> </li>
-            <li class="footer__item"><a href="#">Solutions</a> </li>
-            <li class="footer__item"><a href="#">Community</a> </li>
-            <li class="footer__item"><a href="#">Pricing</a> </li>
+            <li class="footer__item"><a href="#home">Why Alivio</a> </li>
+            <li class="footer__item"><a href="#solution">Solutions</a> </li>
+            <li class="footer__item"><a href="#community">Community</a> </li>
+            <li class="footer__item"><a href="#pricing">Pricing</a> </li>
           </ul>
         </nav>
       </div>

@@ -1,13 +1,27 @@
 .howitworks {
 	padding: 169px 0 51px 0;
+	@include breakpoint(1200) {
+		padding-bottom: 30px;
+		padding-top: 60px;
+		flex-direction: column;
+	}
 	&__header {
 		display: flex;
 		justify-content: space-between;
 		padding-bottom: 52px;
+		@include breakpoint(1200) {
+			padding-bottom: 52px;
+			flex-direction: column;
+			max-width: 600px;
+		}
 	}
 	&__head {
 		min-width: 584px;
 		margin-right: 136px;
+		@include breakpoint(1200) {
+			min-width: auto;
+			margin-right: 0;
+		}
 	}
 	&__head-title {
 		margin-bottom: -3px;
@@ -21,26 +35,42 @@
 		font-size: 50px;
 		font-family: "Georgia", serif;
 		color: $green;
+		@include breakpoint(1200) {
+			line-height: 130%;
+			font-size: 40px;
+		}
 	}
 	&__head-content {
 		padding-top: 58px;
 		max-width: 671px;
 		line-height: 150%;
 		font-weight: 500;
+		@include breakpoint(401) {
+			padding-top: 20px;
+		}
 	}
 }
 .howitworks__steps {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, 390px);
 	column-gap: 95px;
+	@include breakpoint(401) {
+		grid-template-columns: 1fr;
+	}
 }
 
 .howitworks__step {
 	&-item:nth-child(2) {
 		padding-top: 287px;
+		@include breakpoint(1400) {
+			padding-top: 0;
+		}
 	}
 	&-item:nth-child(3) {
 		padding-top: 54px;
+		@include breakpoint(1400) {
+			padding-top: 0;
+		}
 	}
 
 	&-heading {
@@ -69,9 +99,11 @@
 	&-text {
 		margin-bottom: 60px;
 		font-weight: 500;
-		font-size: 20px;
 		line-height: 150%;
 		color: $fontMain;
+		@include breakpoint(1200) {
+			font-size: 16px;
+		}
 	}
 	&-wrapper {
 		position: relative;
